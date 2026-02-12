@@ -1,0 +1,17 @@
+/* Estilo general para toda la página */
+body {
+    background-color: #F0F0F0; /* Gris muy claro en hexadecimal */
+    font-family: sans-serif;
+}
+
+/* Alineamos el título principal al centro */
+#titulo-principal {
+    color: navy;
+    text-align: center;
+}
+
+/* Estilo para elementos urgentes */
+.urgente {
+    color: #FF0000; /* Rojo puro en hexadecimal */
+    font-weight: bold; /* Texto en negrita */
+}
