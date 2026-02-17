@@ -26,7 +26,7 @@ section {
 
 /* Las cajas de cada elemento (los article) */
 article {
-    width: 400px;       /* Ancho fijo para que parezcan tarjetas */
+    width: 700px;       /* Ancho fijo para que parezcan tarjetas */
     background-color: rgb(202, 223, 236);
     padding: 70px;
     border: 5px solid #00054e;
