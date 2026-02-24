@@ -1,7 +1,8 @@
 /* Estilo general para toda la página */
 body {
-    background-color: #F0F0F0; /* Gris muy claro en hexadecimal */
-    font-family: sans-serif;
+    background-color: #F0F0F0; /* Gris muy claro */
+    font-family: "Poiret One", sans-serif; /* Fuente elegante */      
+    font-weight: 700;       /* Negrita */
 }
 
 /* Alineamos el título principal al centro */
@@ -12,29 +13,59 @@ body {
 
 /* Estilo para elementos urgentes */
 .urgente {
-    color: #FF0000; /* Rojo puro en hexadecimal */
-    font-weight: bold; /* Texto en negrita */
+    color: #576272; /* Rojo puro */
+    font-weight: bold; /* Negrita */
 }
 
 /* El contenedor que envuelve los elementos */
 section {
-    display: flex;       /* Activa el modo flexible para sus hijos */
-    flex-wrap: wrap;    /* Si no caben, saltan a la siguiente línea */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
-    gap: 40px;          /* Crea un pasillo de separación entre tarjetas */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px; /* Más espacio alrededor de las tarjetas */
 }
 
-/* Las cajas de cada elemento (los article) */
+/* Las cajas de cada elemento (article) */
 article {
-    width: 700px;       /* Ancho fijo para que parezcan tarjetas */
-    background-color: rgb(202, 223, 236);
-    padding: 70px;
-    border: 5px solid #00054e;
+    width: 700px;
+    max-width: 90%; /* Para que no se desborde en pantallas grandes */
+    background-color: rgb(228, 230, 255); /* Clarito */
+    padding: 50px;
+    border: 2px solid #00054e;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Sombra inicial */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
 }
 
-/* Estilos normales (para ordenador) */
-article {
-    width: 300px;
+/* Centrar y estilizar imágenes */
+article img {
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px; /* Bordes redondeados para imágenes */
+}
+
+/* Efecto hover moderno */
+article:hover {
+    transform: translateY(-8px); /* Sube un poco */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Sombra más visible */
+    cursor: pointer;
+}
+
+/* Estilo de los enlaces (botones) */
+article a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00054e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+article a:hover {
+    background-color: #1a1f8a; /* Cambio suave al pasar el mouse */
 }
 
 /* Estilos para móviles (pantallas de menos de 600px) */
@@ -46,4 +77,10 @@ article {
     h1 {
         font-size: 1.5rem; /* Hacemos el título un poco más pequeño */
     }
+}
+
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
