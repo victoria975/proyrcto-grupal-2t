@@ -10,14 +10,15 @@ titulo.style.backgroundColor = "pink";
 // 1. Seleccionamos el botón
 const miBoton = document.querySelector("#boton-magico");
 
+// 2. Le pedimos que escuche el "click"
+miBoton.addEventListener("click", function() {
+    console.log("¡Has pulsado el botón!");
+    document.body.style.backgroundColor = "lightblue";
+});
 
-// Seleccionamos el botón del modo
-const button = document.querySelector("#btn-modo");
+const boton = document.querySelector("#btn-modo");
 
-// Cuando se hace clic
-button.addEventListener("click", function() {
-
-    // Cambia entre modo claro y oscuro
+boton.addEventListener("click", function() {
+    // Alterna la clase 'noche' en todo el cuerpo de la web
     document.body.classList.toggle("noche");
-
 });
