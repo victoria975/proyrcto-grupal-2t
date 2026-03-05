@@ -85,7 +85,21 @@ article a:hover {
     font-style: normal;
 }
 
-noche{
+/* MODO OSCURO */
+.noche {
+    background-color: #111;
+    color: white;
+}
+
+.noche header {
+    background-color: #222;
+}
+
+.noche article {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+}
 
 background-color: black;
 
