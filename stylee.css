@@ -112,3 +112,22 @@ dialog {
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+article button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00054e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400; /* mismo grosor que el enlace */
+    transition: background-color 0.3s ease;
+}
+
+
+article button:hover {
+    background-color: #1a1f8a; /* Cambio suave al pasar el mouse */
+}
