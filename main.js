@@ -22,3 +22,17 @@ button.addEventListener("click", function() {
     document.body.classList.toggle("noche");
 
 });
+
+const modal = document.getElementById("miModal");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+// Abrir el modal
+openBtn.addEventListener("click", () => {
+  modal.showModal(); // showModal() centra automáticamente
+});
+
+// Cerrar el modal
+closeBtn.addEventListener("click", () => {
+  modal.close();
+});
