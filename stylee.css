@@ -101,6 +101,14 @@ article a:hover {
     padding: 10px;
 }
 
-background-color: black;
+dialog {
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 
+/* Fondo oscuro detrás del modal */
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
