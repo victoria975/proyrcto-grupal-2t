@@ -165,6 +165,12 @@
         </footer>
         
         <script src="main.js"></script>
-        
+        <body>
+          <ul>
+            {% for item in items %}
+                 <li>{{ item.nombre }} -  {{ item.horario }} - {{ item.ubicación }} -  {{ item.trabajdores }}</li>
+            {% endfor %}
+        </ul>
+        </body>
     </body> 
 </html> 
