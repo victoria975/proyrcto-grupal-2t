@@ -13,7 +13,7 @@ def ver_coleccion():
     cursor = conexion.cursor()
     
     # 3. Ejecutamos la consulta SQL
-    cursor.execute("SELECT * FROM TIENDAS")
+    cursor.execute("SELECT * FROM Tienda")
     
     # 4. Guardamos todos los resultados en una variable
     datos = cursor.fetchall()
@@ -23,6 +23,7 @@ def ver_coleccion():
     
     # 6. Enviamos los datos reales a la plantilla
     return render_template("index.html", items=datos)
+
 
 
 if __name__ == "__main__":
