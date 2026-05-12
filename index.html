@@ -1,4 +1,83 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiendas</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/stylee.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1 id="titulo-principal">Tiendas</h1>
+
+    <!-- BOTÓN MODO OSCURO -->
+    <button id="btn-modo" type="button">
+        Modo Claro / Oscuro
+    </button>
+</header>
+
+<main>
+
+<section>
+
+{% for item in items %}
+<article>
+
+    <h3>{{ item.nombre }}</h3>
+
+    <ul>
+        <li><strong>Trabajadores:</strong> {{ item.trabajadores }}</li>
+        <li><strong>Ubicación:</strong> {{ item.ubicacion }}</li>
+        <li><strong>Horario:</strong> {{ item.horario }}</li>
+    </ul>
+
+    <img src="{{ url_for('static', filename='img/logos.png') }}"
+         width="200"
+         alt="Logo tienda">
+
+    <br><br>
+
+    <a href="https://shop.mango.com/es/es" target="_blank">
+        <button type="button">Mas informacion</button>
+    </a>
+
+    <!-- BOTÓN FAVORITA -->
+    <button class="openBtn" type="button">
+        Marcar tienda como favorita
+    </button>
+
+    <!-- MODAL -->
+    <dialog class="miModal">
+        <h2>Marcada como favorita</h2>
+        <p>¡Perfecto!</p>
+
+        <button class="closeBtn" type="button">
+            Cerrar
+        </button>
+    </dialog>
+
+</article>
+{% endfor %}
+
+</section>
+
+</main>
+
+<footer>
+    <p>
+        Pie de página:
+        <em>Carolina, Victoria y Avril - 2026</em>
+    </p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html><!DOCTYPE html>
 <html lang="es"> 
 <head>
     <meta charset="UTF-8"> 
