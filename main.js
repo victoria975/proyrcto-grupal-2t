@@ -1,4 +1,45 @@
-// 1. Seleccionamos el título
+// =======================
+// MODO CLARO / OSCURO
+// =======================
+
+const btnModo = document.getElementById("btn-modo");
+
+btnModo.addEventListener("click", () => {
+
+    document.body.classList.toggle("noche");
+
+});
+
+// =======================
+// MODALES FAVORITOS
+// =======================
+
+const openButtons = document.querySelectorAll(".openBtn");
+const closeButtons = document.querySelectorAll(".closeBtn");
+const modals = document.querySelectorAll(".miModal");
+
+openButtons.forEach((btn, index) => {
+
+    btn.addEventListener("click", () => {
+
+        modals[index].showModal();
+
+    });
+
+});
+
+closeButtons.forEach((btn, index) => {
+
+    btn.addEventListener("click", () => {
+
+        modals[index].close();
+
+    });
+
+});
+
+
+console.log("JS cargado");// 1. Seleccionamos el título
 const titulo = document.querySelector("h1");
 
 // 2. Cambiamos su texto
