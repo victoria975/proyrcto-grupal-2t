@@ -13,8 +13,8 @@ body {
 
 /* Estilo para elementos urgentes */
 .urgente {
-    color: #576272; /* Rojo puro */
-    font-weight: bold; /* Negrita */
+    color: #576272;
+    font-weight: bold;
 }
 
 /* El contenedor que envuelve los elementos */
@@ -23,36 +23,36 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
-    padding: 40px; /* Más espacio alrededor de las tarjetas */
+    padding: 40px;
 }
 
 /* Las cajas de cada elemento (article) */
 article {
     width: 700px;
-    max-width: 90%; /* Para que no se desborde en pantallas grandes */
-    background-color: rgb(228, 230, 255); /* Clarito */
+    max-width: 90%;
+    background-color: rgb(228, 230, 255);
     padding: 50px;
     border: 2px solid #00054e;
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Sombra inicial */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Centrar y estilizar imágenes */
 article img {
     display: block;
     margin: 15px auto;
-    border-radius: 10px; /* Bordes redondeados para imágenes */
+    border-radius: 10px;
 }
 
 /* Efecto hover moderno */
 article:hover {
-    transform: translateY(-8px); /* Sube un poco */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Sombra más visible */
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
     cursor: pointer;
 }
 
-/* Estilo de los enlaces (botones) */
+/* Estilo de los enlaces */
 article a {
     display: inline-block;
     margin-top: 15px;
@@ -65,17 +65,17 @@ article a {
 }
 
 article a:hover {
-    background-color: #1a1f8a; /* Cambio suave al pasar el mouse */
+    background-color: #1a1f8a;
 }
 
-/* Estilos para móviles (pantallas de menos de 600px) */
+/* Estilos para móviles */
 @media (max-width: 768px) {
     article {
-        width: 100%; /* La tarjeta ocupa todo el ancho en el móvil */
+        width: 100%;
     }
     
     h1 {
-        font-size: 1.5rem; /* Hacemos el título un poco más pequeño */
+        font-size: 1.5rem;
     }
 }
 
@@ -85,7 +85,10 @@ article a:hover {
     font-style: normal;
 }
 
-/* MODO OSCURO */
+/* =======================
+   MODO OSCURO
+======================= */
+
 .noche {
     background-color: #111;
     color: white;
@@ -97,21 +100,33 @@ article a:hover {
 
 .noche article {
     background-color: #333;
-    border-radius: 10px;
-    padding: 10px;
+    border: 2px solid #555;
+    color: white;
 }
 
+.noche #titulo-principal {
+    color: white;
+}
+
+/* =======================
+   MODAL
+======================= */
+
 dialog {
-  padding: 20px;
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* Fondo oscuro detrás del modal */
 dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
+/* =======================
+   BOTONES
+======================= */
 
 article button {
     display: inline-block;
@@ -123,11 +138,16 @@ article button {
     border-radius: 6px;
     cursor: pointer;
     font-family: "Poiret One", sans-serif;
-    font-weight: 400; /* mismo grosor que el enlace */
+    font-weight: 400;
     transition: background-color 0.3s ease;
 }
 
-
 article button:hover {
-    background-color: #1a1f8a; /* Cambio suave al pasar el mouse */
+    background-color: #1a1f8a;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
 }
