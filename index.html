@@ -35,9 +35,13 @@
         <li><strong>Horario:</strong> {{ item.horario }}</li>
     </ul>
 
-    <img src="{{ url_for('static', filename='img/logos.png') }}"
-         width="200"
-         alt="Logo tienda">
+    <!-- Si tienes imágenes guardadas en la BD, se usa item.imagen -->
+        {% if item.imagen %}
+        <img src="{{ url_for('static', filename='img/' ~ item.imagen) }}" width="200" alt="{{ item.nombre }}"> 
+        {% else %}
+        <!-- Imagen por defecto (copia una de tus jpg a static/img/) -->
+        <img src="{{ url_for('static', filename='img/mango.jpg') }}" width="200" alt="{{ item.nombre }}"> 
+        {% endif %}
 
     <br><br>
 
